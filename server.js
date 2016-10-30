@@ -2,7 +2,7 @@
 // dependencies
 var express = require('express');
 var app = express();
-var handlebars = require('express-handlebars');
+var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 
 // Database configuration with mongoose
-mongoose.connect('mongodb://localhost/week18day3mongoose');
+mongoose.connect('mongodb://heroku_0qnnnblg:6tdh15o9ps04opl7p7fq4bjk11@ds139277.mlab.com:39277/heroku_0qnnnblg');
 var db = mongoose.connection;
 
 // show any mongoose errors
@@ -35,8 +35,8 @@ db.once('open', function() {
 
 
 // And we bring in our Note and Article models
-var Note = require('./models/Note.js');
-var Article = require('./models/Article.js');
+var Note = require('./models/note.js');
+var Article = require('./models/articles.js');
 
 
 // Routes

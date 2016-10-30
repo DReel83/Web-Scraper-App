@@ -1,20 +1,30 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "web-scraper-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "web scraping app using mongodb with cheerio",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.20.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0",
+    "request": "^2.76.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DReel83/web-scraper-app.git"
+  },
+  "author": "David Reel",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.15.0",
-    "cheerio": "^0.20.0",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.6",
-    "morgan": "^1.7.0",
-    "request": "^2.69.0"
-  }
+  "bugs": {
+    "url": "https://github.com/DReel83/web-scraper-app/issues"
+  },
+  "homepage": "https://github.com/DReel83/web-scraper-app#readme"
 }
