@@ -44,7 +44,7 @@ var Article = require('./models/articles.js');
 
 // Simple index route
 app.get('/', function(req, res) {
-  res.send(index.html);
+  res.send();
 });
 
 // A GET request to scrape the echojs website.
