@@ -1,12 +1,11 @@
 
 // dependencies
 var express = require('express');
-var handlebars = require('express-handlebars');
 var app = express();
+var handlebars = require('express-handlebars');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
-// Notice: Our scraping tools are prepared, too
 var request = require('request'); 
 var cheerio = require('cheerio');
 
@@ -51,7 +50,7 @@ app.get('/', function(req, res) {
 // A GET request to scrape the echojs website.
 app.get('/scrape', function(req, res) {
 	// first, we grab the body of the html with request
-  request('http://www.echojs.com/', function(error, response, html) {
+  request('http://www.nytimes.com/', function(error, response, html) {
   	// then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     // now, we grab every h2 within an article tag, and do the following:
